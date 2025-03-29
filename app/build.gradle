@@ -36,7 +36,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion '1.5.8'
+        kotlinCompilerExtensionVersion '1.5.15'
     }
 
     compileOptions {
@@ -72,6 +72,11 @@ dependencies {
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_ui_version"
     debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_ui_version"
 
+//  Koin core dependency
+    implementation "io.insert-koin:koin-core:$koin_version"
+
+//  Koin Android extensions
+    implementation "io.insert-koin:koin-android:$koin_version"
     // Koin AndroidX Scope features
     implementation "io.insert-koin:koin-android:$koin_version"
 
@@ -84,14 +89,6 @@ dependencies {
     // realm
     implementation 'io.realm.kotlin:library-base:1.16.0'
     implementation 'io.realm.kotlin:library-sync:1.16.0'
-
-    // Koin core dependency
-    implementation "io.insert-koin:koin-core:3.2.2"
-
-// Koin Android extensions
-    implementation "io.insert-koin:koin-android:3.2.2"
-
-
 
 //    annotationProcessor("io.realm:realm-android:1.16.0")
 //    implementation("io.realm:realm-kotlin-extensions:1.16.0")
